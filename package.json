@@ -1,0 +1,25 @@
+{
+  "name": "cid10-api",
+  "version": "1.0.0",
+  "description": "Api para consulta de dados sobre o CID 10",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "dev": "nodemon ./bin/server.js"
+  },
+  "keywords": [
+    "CID10"
+  ],
+  "author": "Werlesson de Oliveira Vieira",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "mongoose": "^5.5.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
