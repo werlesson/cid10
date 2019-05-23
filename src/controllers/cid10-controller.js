@@ -5,18 +5,20 @@ const reg = require("../mixin/regexIgnoreAccents");
 
 exports.get = (req, res, next) => {
   const { page, perPage, subcat, search } = req.query;
+  let query = {};
 
-  const query = {
-    $or: [
-      { SUBCAT: new RegExp(reg.make_pattern(search), "i") },
-      { DESCRICAO: new RegExp(reg.make_pattern(search), "i") }
-    ]
-  };
+  if (typeof search == "string")
+    query = {
+      $or: [
+        { SUBCAT: new RegExp(reg.make_pattern(search), "i") },
+        { DESCRICAO: new RegExp(reg.make_pattern(search), "i") }
+      ]
+    };
 
   const options = {
     page: parseInt(page, 10) || 1,
     limit: parseInt(perPage, 10) || 10,
-    sort: { SUBCAT: subcat || "desc" },
+    sort: { SUBCAT: subcat || "asc" },
     select: "SUBCAT DESCRICAO DESCRABREV"
   };
 
