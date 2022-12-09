@@ -13,9 +13,9 @@
   "author": "Werlesson de Oliveira Vieira",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "debug": "^4.1.1",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "http": "0.0.0",
     "mongoose": "^5.7.5",
     "mongoose-paginate-v2": "^1.3.0"
